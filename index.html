@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall St Kid 2021</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">"
+</head>
+
+<body>
+    <h1>Wall $treet Kid 2021!!</h1>
+    <h2>Cash: $<span id="cash"></span></h2>
+    <h2>Investments: $<span id="investments"></span></h2>
+    <div class="d-flex flex-column" id="game">
+        <div class="text-center">
+            <audio controls>
+                <source src="music/wallstjam.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="text-center">
+            <img src="img/title.jpg" id="title-screen" class="rounded" alt="wall st kid">
+        </div>
+        <div class="text-center" id="text-area">
+
+        </div>
+        <div class="text-center" id="advice-area">
+
+        </div>
+        <div class="text-center" id="button-area">
+            <button id="start-game" type="button" class="btn btn-success">$tart Inve$ting!</button>
+        </div>
+        <div class="text-center" id="stock-data">
+            <table class="table table-hover" id="stocktable">
+                <thead>
+                    <tr>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Buy?</th>
+                        <th scope="col">Sell?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="stock-name" id="lamestop">LAMESTOP</th>
+                        <td>$6 per share</td>
+                        <td><button type="button" class="btn btn-success" onClick="buyShares()">BUY SHARES</button></td>
+                        <td><button type="button" class="btn btn-danger" onClick="sellShares()">SELL YOUR
+                                SHARES</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="stock-name" id="bedbath">BED BATH AND MORE</th>
+                        <td>$3 per share</td>
+                        <td><button type="button" class="btn btn-success" onClick="buyShares()">BUY SHARES</button></td>
+                        <td><button type="button" class="btn btn-danger" onClick="sellShares()">SELL YOUR
+                                SHARES</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="stock-name" id="brokia">BROKIA</th>
+                        <td>$2 per share</td>
+                        <td><button type="button" class="btn btn-success" onClick="buyShares()">BUY SHARES</button></td>
+                        <td><button type="button" class="btn btn-danger" onClick="sellShares()">SELL YOUR
+                                SHARES</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="stock-name" id="acmtheaters">ACM THEATERS</th>
+                        <td>$2 per share</td>
+                        <td><button type="button" class="btn btn-success" onClick="buyShares()">BUY SHARES</button></td>
+                        <td><button type="button" class="btn btn-danger" onClick="sellShares()">SELL YOUR
+                                SHARES</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="stock-name" id="canair">CANADA AIRLINES</th>
+                        <td>$9 per share</td>
+                        <td><button type="button" class="btn btn-success" onClick="buyShares()">BUY SHARES</button></td>
+                        <td><button type="button" class="btn btn-danger" onClick="sellShares()">SELL YOUR
+                                SHARES</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center" id="trending-news">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Today's News on Tweeter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button type="button" class="btn btn-primary" id="news-0" onClick="getNews1()">Stock Prices
+                                Surge Thanks To
+                                Internet
+                                Memers</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-primary" id="news-1" onClick="getNews2()">Home Alone 2
+                                Star and Former
+                                "President" Gets
+                                Arrested in New York</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-primary" id="news-2" onClick="getNews3()">Nerds On The
+                                Internet Can't Stand Animaniacs Reboot</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-primary" id="news-3" onClick="getNews4()">Cat
+                                Supposedly Invents Her Own Cryptocurrency</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-primary" id="news-5" onClick="getNews5()">Eccentric
+                                Billionaire Elon Mu$k Backs DogeCoin</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="game.js"></script>
+
+</html>

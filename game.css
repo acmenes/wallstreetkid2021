@@ -1,0 +1,19 @@
+h1, h2 {
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    max-height: 200px;
+    height: auto;
+    width: auto;
+}
+
+/* button {
+    margin: auto;
+} */
+
+/* .game {
+    align-items: center;
+    margin: auto;
+} */
